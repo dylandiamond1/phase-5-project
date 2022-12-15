@@ -4,19 +4,19 @@ import React, {useState} from 'react'
 
 function SignUp({updateUser}) {
     const [formData, setFormData] = useState({
-        name:'',
+        username:'',
         email:'',
         password:''
     })
     const [errors, setErrors] = useState([])
     
 
-    const {name, email, password} = formData
+    const {username, email, password} = formData
 
     function onSubmit(e){
         e.preventDefault()
         const user = {
-            name,
+            username,
             email,
             password
         }
@@ -48,7 +48,7 @@ function SignUp({updateUser}) {
         <label>
           Username
           </label>  
-          <input type='text' name='name' value={name} onChange={handleChange} />
+          <input type='text' name='username' value={username} onChange={handleChange} />
        
         <label>
          Email

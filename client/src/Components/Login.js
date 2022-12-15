@@ -4,19 +4,19 @@ import React, {useState} from 'react'
 
 function Login({updateUser}) {
     const [formData, setFormData] = useState({
-        name:'',
+        username:'',
         email:'',
         password:''
     })
     const [errors, setErrors] = useState([])
     
 
-    const {name, password} = formData
+    const {username, password} = formData
 
     function onSubmit(e){
         e.preventDefault()
         const user = {
-            name,
+            username,
             password
         }
        console.log(user)
@@ -44,11 +44,11 @@ function Login({updateUser}) {
       }
     return (
         <> 
-        <form onSubmit={onSubmit}>
-        <label>
+        <form className="form" onSubmit={onSubmit}>
+        <label >
           Username
           </label>
-        <input type='text' name='name' value={name} onChange={handleChange} />
+        <input type='text' name='username' value={username} onChange={handleChange} />
       
         <label>
          Password
