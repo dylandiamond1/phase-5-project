@@ -1,19 +1,32 @@
-import { useState, useEffect } from "react";
+  import React from 'react'
+  import  {useState}  from "react";
+  import { Route, Routes } from "react-router-dom";
+  import Login from "./Components/Login";
+  import SignUp from "./Components/Signup";
+  import Navigation from './Components/Navigation'
 
-function App() {
-  const [count, setCount] = useState(0);
+  function App() {
+    
+    // const [productions, setProductions] = useState([])
+    const [errors, setErrors] = useState(false)
+    const [currentUser, setCurrentUser] = useState(false)
 
-  useEffect(() => {
-    fetch("/hello")
-      .then((r) => r.json())
-      .then((data) => setCount(data.count));
-  }, []);
+    const updateUser = (user) => setCurrentUser(user)
 
-  return (
-    <div className="App">
-      <h1>Page Count: {count}</h1>
-    </div>
-  );
-}
+    if(errors) return <h1>{errors}</h1>
 
-export default App;
+
+
+    return (
+      <>
+      <Navigation />
+          <Routes>
+            <Route path='/' element={<SignUp />} />
+            <Route path='/users/new' element={<SignUp />} />
+            <Route path='/login' element={<Login updateUser={updateUser}/>} />
+         </Routes>
+      </>
+      )
+      }
+
+  export default App;
