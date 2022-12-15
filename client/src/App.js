@@ -1,9 +1,13 @@
   import React from 'react'
-  import  {useState}  from "react";
+  import  {useState, useEffect} from "react";
   import { Route, Routes } from "react-router-dom";
   import Login from "./Components/Login";
   import SignUp from "./Components/Signup";
   import Navigation from './Components/Navigation'
+  import Home from "./Components/Home";
+  import Aboutus from './Components/AboutUs';
+  import Footer from './Components/Footer';
+ 
 
   function App() {
     
@@ -21,9 +25,11 @@
       <>
       <Navigation />
           <Routes>
-            <Route path='/' element={<SignUp />} />
-            <Route path='/users/new' element={<SignUp />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/users/new' element={<SignUp updateUser={updateUser}/>} />
             <Route path='/login' element={<Login updateUser={updateUser}/>} />
+            <Route path='/AboutUs' element={<Aboutus />} />
+            <Route path='/Footer' element={<Footer />} />
          </Routes>
       </>
       )
