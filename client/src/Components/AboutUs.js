@@ -10,7 +10,6 @@ function Aboutus () {
             The founder and owner of Staats Developers, Inc., Tommy Staats, brings more than 30 years of residential and commercial construction experience to the company he founded in 1991. He and his staff are dedicated to providing the expertise and attention to detail that homeowners are seeking when creating a new custom home or transforming an existing home through quality renovation. A hands-on approach is taken with every construction opportunity whether it is creating a distinctive custom home in a quiet residential neighborhood, managing an extensive renovation of an existing home, or building a retail center in a busy city.
 
             Staats Developers takes seriously the motto which has built our good reputation: "Quality Comes First."
-            
         </textarea>
     )
     }
