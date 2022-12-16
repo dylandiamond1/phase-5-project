@@ -4,6 +4,8 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.string :address
       t.string :state
       t.string :zip
+      t.string :city
+      t.string :image
       t.integer :sq_ft
       t.belongs_to :users, null: false, foreign_key: true
 
