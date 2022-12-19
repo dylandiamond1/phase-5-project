@@ -7,7 +7,7 @@ class CreateHouses < ActiveRecord::Migration[7.0]
       t.string :city
       t.string :image
       t.integer :sq_ft
-      t.belongs_to :users, null: false, foreign_key: true
+      t.belongs_to :user, null: false, foreign_key: true
 
       t.timestamps
     end

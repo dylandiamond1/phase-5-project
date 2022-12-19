@@ -14,16 +14,16 @@ c10 = City.create(name:'Fairfax Station')
 puts "cities done"
 puts "seeding schools..."
 
-d1 = School.create(elementary_school:'Douglas MacArthur Elementary School', middle_school:'Francis C. Hammond Middle School', high_school:'Robert E Lee School High School')
-d2 = School.create(elementary_school:'Mosaic Elementary School', middle_school:'Luther Jackson Middle School', high_school:'Fairfax High School')
-d3 = School.create(elementary_school:'Lake Anne Elementary School', middle_school:'Langston Hughes Middle School', high_school:'South Lakes High School')
-d4 = School.create(elementary_school:'Vienna Elementary School', middle_school:'Thoreau Middle School', high_school:'Madison High School')
-d5 = School.create(elementary_school:'Franklin Sherman Elementary School', middle_school:'Cooper Middle School', high_school:'Langley High School')
-d6 = School.create(elementary_school:'Great Falls Elementary School', middle_school:'Cooper Middle School', high_school:'Potomac Falls High School')
-d7 = School.create(elementary_school:'Oak Street Elementary School', middle_school:'Mary Ellen Henderson Middle Schoo', high_school:'Meridian High School')
-d8 = School.create(elementary_school:'Herndon Elementary School', middle_school:'Herndon Middle School', high_school:'Herndon High School')
-d9 = School.create(elementary_school:'Montessori School of Chantilly', middle_school:'Franklin Middle School', high_school:'Chantilly High School')
-d10 = School.create(elementary_school:'Fairview Elementary School', middle_school:'James W Robinson, Jr. Secondary School', high_school:'James W Robinson, Jr. Secondary School')
+d1 = School.create(elementary_school:'Douglas MacArthur Elementary School', middle_school:'Francis C. Hammond Middle School', high_school:'Robert E Lee School High School', city_id:c1)
+d2 = School.create(elementary_school:'Mosaic Elementary School', middle_school:'Luther Jackson Middle School', high_school:'Fairfax High School', city_id:c2)
+d3 = School.create(elementary_school:'Lake Anne Elementary School', middle_school:'Langston Hughes Middle School', high_school:'South Lakes High School', city_id:c3)
+d4 = School.create(elementary_school:'Vienna Elementary School', middle_school:'Thoreau Middle School', high_school:'Madison High School', city_id:c4)
+d5 = School.create(elementary_school:'Franklin Sherman Elementary School', middle_school:'Cooper Middle School', high_school:'Langley High School', city_id:c5)
+d6 = School.create(elementary_school:'Great Falls Elementary School', middle_school:'Cooper Middle School', high_school:'Potomac Falls High School', city_id:c6)
+d7 = School.create(elementary_school:'Oak Street Elementary School', middle_school:'Mary Ellen Henderson Middle Schoo', high_school:'Meridian High School', city_id:c7)
+d8 = School.create(elementary_school:'Herndon Elementary School', middle_school:'Herndon Middle School', high_school:'Herndon High School', city_id:c8)
+d9 = School.create(elementary_school:'Montessori School of Chantilly', middle_school:'Franklin Middle School', high_school:'Chantilly High School', city_id:c9)
+d10 = School.create(elementary_school:'Fairview Elementary School', middle_school:'James W Robinson, Jr. Secondary School', high_school:'James W Robinson, Jr. Secondary School', city_id:c10)
 
 puts "schools done"
 puts "seeding architects..."
@@ -38,16 +38,16 @@ a1 = Architect.create(company_name:'bowersdesignbuild', first_name:'Bruce', last
 puts "architects done"
 puts "seeding houses..."
 
-b1 = House.create(address:'1718 Westmoreland Street', state:'VA', zip:'22101', city:'Mclean', sq_ft: 7,000, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2020/05/Screenshot-263-1024x568.png')
-b2 = House.create(address:'1011 Washington Street North', state:'VA', zip:'22314', city:'Alexandria', sq_ft: 7,700, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-206.png')
-b3 = House.create(address:'222 W Greenway Blvd', state:'VA', zip:'22046', city:'Falls Church', sq_ft: 11,800 , image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2022/08/build-a-home-northern-virginia-1024x554.png')
-b4 = House.create(address:'320 Glyndon St Ne', state:'VA', zip:'22180', city:'Vienna',sq_ft: 6,990, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-252-1024x570.png')
-b5 = House.create(address:'', state:'', zip:'', city:'Herndon',sq_ft: 8,100, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2021/11/Contemporary-Elevation.png')
-b6 = House.create(address:'', state:'', zip:'', city:'Mclean',sq_ft: '', image:'')
-b7 = House.create(address:'', state:'', zip:'', city:'Mclean',sq_ft: '', image:'')
-b8 = House.create(address:'', state:'', zip:'', city:'Mclean',sq_ft: '', image:'')
-b9 = House.create(address:'', state:'', zip:'', city:'Mclean',sq_ft: '', image:'')
-b10 = House.create(address:'', state:'', zip:'', city:'Mclean',sq_ft: '', image:'')
+b1 = House.create(address:'1718 Westmoreland Street', state:'VA', zip:'22101', city:'Mclean', sq_ft: '7,000', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2020/05/Screenshot-263-1024x568.png')
+b2 = House.create(address:'1011 Washington Street North', state:'VA', zip:'22314', city:'Alexandria', sq_ft: '7,700', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-206.png')
+b3 = House.create(address:'222 W Greenway Blvd', state:'VA', zip:'22046', city:'Falls Church', sq_ft: '11,800',  image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2022/08/build-a-home-northern-virginia-1024x554.png')
+b4 = House.create(address:'320 Glyndon St Ne', state:'VA', zip:'22180', city:'Vienna',sq_ft: '6,990', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-252-1024x570.png')
+b5 = House.create(address:'12411 Vacation Pl', state:'VA', zip:'20170', city:'Herndon',sq_ft: '8,100',  image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2021/11/Contemporary-Elevation.png')
+b6 = House.create(address:'10617 Timberidge Rd', state:'VA', zip:'22039', city:'Fairfax Station',sq_ft: '6000', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/sedona-new-600x337.jpg')
+b7 = House.create(address:'25691 Donerails Chase Dr', state:'', zip:'20152', city:'Chantilly',sq_ft: '5,121', image:'https://photos.zillowstatic.com/fp/0b81cea97aca4d9be7a65a96e22682aa-cc_ft_1536.webp')
+b8 = House.create(address:'9616 Georgetown Pike', state:'VA', zip:'22066', city:'Great Falls',sq_ft: '15,000', image:'https://photos.zillowstatic.com/fp/e45b265430325be592f37bf320239dce-cc_ft_1536.webp')
+b9 = House.create(address:'11194 Longwood Grove Dr', state:'VA', zip:'20194', city:'Reston',sq_ft: '4,138', image:'https://photos.zillowstatic.com/fp/64ad40b3b61e736fc4507ee9dc45a73a-cc_ft_1536.webp')
+b10 = House.create(address:'11721 Washington St', state:'VA', zip:'22030', city:'Fairfax',sq_ft: '14,091', image:'https://photos.zillowstatic.com/fp/2aea398bc09ceb631c98a1c11d743006-cc_ft_1536.webp')
 
 puts "houses done"
 

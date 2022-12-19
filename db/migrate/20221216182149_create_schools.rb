@@ -4,7 +4,7 @@ class CreateSchools < ActiveRecord::Migration[7.0]
       t.string :elementary_school
       t.string :middle_school
       t.string :high_school
-      t.belongs_to :cities, null: false, foreign_key: true
+      t.belongs_to :city, null: false, foreign_key: true
 
       t.timestamps
     end
