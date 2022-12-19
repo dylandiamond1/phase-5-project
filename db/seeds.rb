@@ -1,15 +1,15 @@
 puts "seeding cities..."
 
-c1 = City.create(name:'Alexandria')
-c2 = City.create(name:'Fairfax')
-c3 = City.create(name:'Reston')
-c4 = City.create(name:'Vienna')
-c5 = City.create(name:'McLean')
-c6 = City.create(name:'Great Falls')
-c7 = City.create(name:'Falls Church')
-c8 = City.create(name:'Herndon')
-c9 = City.create(name:'Chantilly')
-c10 = City.create(name:'Fairfax Station')
+c1 = Cities.create(name:'Alexandria')
+c2 = Cities.create(name:'Fairfax')
+c3 = Cities.create(name:'Reston')
+c4 = Cities.create(name:'Vienna')
+c5 = Cities.create(name:'McLean')
+c6 = Cities.create(name:'Great Falls')
+c7 = Cities.create(name:'Falls Church')
+c8 = Cities.create(name:'Herndon')
+c9 = Cities.create(name:'Chantilly')
+c10 = Cities.create(name:'Fairfax Station')
 
 puts "cities done"
 puts "seeding schools..."
@@ -35,21 +35,7 @@ a1 = Architect.create(company_name:'schroeder design build', first_name:'Andrew'
 a1 = Architect.create(company_name:'wcarlston build', first_name:'Warren', last_name:'Ralston', email:'info@wcarlston.com', contact_number:'703-667-7861', website_url:'https://www.wcralston.com/')
 a1 = Architect.create(company_name:'bowersdesignbuild', first_name:'Bruce', last_name:'Bowers', email:'info@bowersdesignbuild.com', contact_number:'703 506-0619', website_url:'https://www.bowersdesignbuild.com/')
 
-puts "architects done"
-puts "seeding houses..."
-
-b1 = House.create(address:'1718 Westmoreland Street', state:'VA', zip:'22101', city:'Mclean', sq_ft: '7,000', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2020/05/Screenshot-263-1024x568.png')
-b2 = House.create(address:'1011 Washington Street North', state:'VA', zip:'22314', city:'Alexandria', sq_ft: '7,700', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-206.png')
-b3 = House.create(address:'222 W Greenway Blvd', state:'VA', zip:'22046', city:'Falls Church', sq_ft: '11,800',  image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2022/08/build-a-home-northern-virginia-1024x554.png')
-b4 = House.create(address:'320 Glyndon St Ne', state:'VA', zip:'22180', city:'Vienna',sq_ft: '6,990', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-252-1024x570.png')
-b5 = House.create(address:'12411 Vacation Pl', state:'VA', zip:'20170', city:'Herndon',sq_ft: '8,100',  image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2021/11/Contemporary-Elevation.png')
-b6 = House.create(address:'10617 Timberidge Rd', state:'VA', zip:'22039', city:'Fairfax Station',sq_ft: '6000', image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/sedona-new-600x337.jpg')
-b7 = House.create(address:'25691 Donerails Chase Dr', state:'', zip:'20152', city:'Chantilly',sq_ft: '5,121', image:'https://photos.zillowstatic.com/fp/0b81cea97aca4d9be7a65a96e22682aa-cc_ft_1536.webp')
-b8 = House.create(address:'9616 Georgetown Pike', state:'VA', zip:'22066', city:'Great Falls',sq_ft: '15,000', image:'https://photos.zillowstatic.com/fp/e45b265430325be592f37bf320239dce-cc_ft_1536.webp')
-b9 = House.create(address:'11194 Longwood Grove Dr', state:'VA', zip:'20194', city:'Reston',sq_ft: '4,138', image:'https://photos.zillowstatic.com/fp/64ad40b3b61e736fc4507ee9dc45a73a-cc_ft_1536.webp')
-b10 = House.create(address:'11721 Washington St', state:'VA', zip:'22030', city:'Fairfax',sq_ft: '14,091', image:'https://photos.zillowstatic.com/fp/2aea398bc09ceb631c98a1c11d743006-cc_ft_1536.webp')
-
-puts "houses done"
+puts "creating users..."
 
 u1 = User.create(username: 'paolo', password: 'password', email: 'paolo@gmail.com')
 u2 = User.create(username: 'dylan', password: 'password', email: 'dylan@gmail.com')
@@ -58,5 +44,23 @@ u4 = User.create(username: 'stephen', password: 'password', email: 'stephen@gmai
 u5 = User.create(username: 'kodakbrindle', password: 'password', email: 'kodakbrindle@gmail.com')
 u6 = User.create(username: 'junosmith', password: 'password', email: 'junosmith@gmail.com')
 u7 = User.create(username: 'yesenia', password: 'password', email: 'yesenia@gmail.com')
+
+puts "created users"
+
+
+b1 = House.create(address:'1718 Westmoreland Street', state:'VA', zip:'22101', city:'Mclean', sq_ft: '7,000', user_id: u1.id, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2020/05/Screenshot-263-1024x568.png')
+b2 = House.create(address:'1011 Washington Street North', state:'VA', zip:'22314', city:'Alexandria', sq_ft: '7,700', user_id: u2.id, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-206.png')
+b3 = House.create(address:'222 W Greenway Blvd', state:'VA', zip:'22046', city:'Falls Church', sq_ft: '11,800', user_id: u3.id, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2022/08/build-a-home-northern-virginia-1024x554.png')
+b4 = House.create(address:'320 Glyndon St Ne', state:'VA', zip:'22180', city:'Vienna',sq_ft: '6,990', user_id: u4.id, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/Screenshot-252-1024x570.png')
+b5 = House.create(address:'12411 Vacation Pl', state:'VA', zip:'20170', city:'Herndon',sq_ft: '8,100', user_id: u5.id,  image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2021/11/Contemporary-Elevation.png')
+b6 = House.create(address:'10617 Timberidge Rd', state:'VA', zip:'22039', city:'Fairfax Station',sq_ft: '6000', user_id: u1.id, image:'https://www.buildwithclassic.com/2019/wp-content/uploads/2019/09/sedona-new-600x337.jpg')
+b7 = House.create(address:'25691 Donerails Chase Dr', state:'', zip:'20152', city:'Chantilly',sq_ft: '5,121', user_id: u1.id, image:'https://photos.zillowstatic.com/fp/0b81cea97aca4d9be7a65a96e22682aa-cc_ft_1536.webp')
+b8 = House.create(address:'9616 Georgetown Pike', state:'VA', zip:'22066', city:'Great Falls',sq_ft: '15,000', user_id: u1.id, image:'https://photos.zillowstatic.com/fp/e45b265430325be592f37bf320239dce-cc_ft_1536.webp')
+b9 = House.create(address:'11194 Longwood Grove Dr', state:'VA', zip:'20194', city:'Reston',sq_ft: '4,138', user_id: u3.id, image:'https://photos.zillowstatic.com/fp/64ad40b3b61e736fc4507ee9dc45a73a-cc_ft_1536.webp')
+b10 = House.create(address:'11721 Washington St', state:'VA', zip:'22030', city:'Fairfax',sq_ft: '14,091', user_id: u2.id,image:'https://photos.zillowstatic.com/fp/2aea398bc09ceb631c98a1c11d743006-cc_ft_1536.webp')
+
+puts "houses done"
+
+
 
 puts "done seeding..."

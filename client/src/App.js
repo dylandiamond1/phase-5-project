@@ -24,7 +24,7 @@
 
     return (
       <>
-      <Navigation user={user} setUser={setUser} />
+      <Navigation updateUser={updateUser} user={user} setUser={setUser} />
       <main>
         {user ? (
           <Routes>

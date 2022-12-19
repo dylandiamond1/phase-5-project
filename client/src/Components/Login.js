@@ -44,16 +44,11 @@ function Login({updateUser}) {
       }
     return (
         <> 
-        <form className="form" onSubmit={onSubmit}>
-        <label >
-          Username
-          </label>
-        <input type='text' name='username' value={username} onChange={handleChange} />
+        <form  className="form" onSubmit={onSubmit}>
+    
+        <input className="input w-full max-w-xs" placeholder='Username' type='text' name='username' value={username} onChange={handleChange} />
       
-        <label>
-         Password
-         </label>
-        <input type='password' name='password' value={password} onChange={handleChange} />
+        <input className="input w-full max-w-xs" placeholder='Password' type='password' name='password' value={password} onChange={handleChange} />
        
        
         <input type='submit' value='Log in!' />
