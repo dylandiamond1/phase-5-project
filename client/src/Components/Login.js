@@ -45,13 +45,22 @@ function Login({updateUser}) {
     return (
         <> 
         <form  className="form" onSubmit={onSubmit}>
-    
-        <input className="input w-full max-w-xs" placeholder='Username' type='text' name='username' value={username} onChange={handleChange} />
-      
+
+         <ul>
+        <li>
+            <input className="input w-full max-w-xs" placeholder='Username' type='text' name='username' value={username} onChange={handleChange} />
+        </li>
+        <br></br>
+
+        <li>
         <input className="input w-full max-w-xs" placeholder='Password' type='password' name='password' value={password} onChange={handleChange} />
+        </li>
+        <br></br>
+
+        </ul>
        
        
-        <input type='submit' value='Log in!' />
+        <input className="btn glass signupButton" type='submit' value='Log in!' />
       </form>
       {errors? <div>{errors}</div>:null}
         </>

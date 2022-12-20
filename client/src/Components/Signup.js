@@ -44,24 +44,22 @@ function SignUp({updateUser}) {
       }
     return (
         <> 
-        <form onSubmit={onSubmit}>
-        <label>
-          Username
-          </label>  
-          <input type='text' name='username' value={username} onChange={handleChange} />
-       
-        <label>
-         Email
-         </label>
-        <input type='text' name='email' value={email} onChange={handleChange} />
-       
-        <label>
-         Password
-         </label>
-        <input type='password' name='password' value={password} onChange={handleChange} />
+        <form className="form" onSubmit={onSubmit}>  
+        <ul>
+        <li>
+        <input className="input w-full max-w-xs" placeholder="Username" type='text' name='username' value={username} onChange={handleChange} />
+        </li>
+        <br></br>
+        <input className="input w-full max-w-xs"placeholder="Email" type='text' name='email' value={email} onChange={handleChange} />
+        <li>
+        <br></br>
+        <input className="input w-full max-w-xs"placeholder="Password" type='password' name='password' value={password} onChange={handleChange} />
+        </li>
+        <br></br>
+        </ul>
         
        
-        <input type='submit' value='Sign up!' />
+        <input className="btn glass signupButton" type='submit' value='Sign up!' />
       </form>
       {errors?errors.map(e => <div>{e[0]+': ' + e[1]}</div>):null}
         </>
