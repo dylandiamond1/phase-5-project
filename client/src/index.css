@@ -39,11 +39,23 @@ footer {
   }
 
   .card {
-    width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);;
+    width: 300px;
+  }
+
+  .cardContainer {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    alignItems: center;
+  }
+
+  .cardBox {
+    margin: 1vw;
+  }
+
+  .text {
+    float: left;
   }
 
  

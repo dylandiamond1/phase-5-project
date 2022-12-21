@@ -18,9 +18,9 @@ function HouseCollection () {
         setHouses(newHouseList)
       }
 
-      function handleAdd(newHouse) {
-        setHouses([...houses, newHouse]);
-      }
+    //   function handleAdd(newHouse) {
+    //     setHouses([...houses, newHouse]);
+    //   }
 
       const HouseCards = houses.map((house) => (
         <HouseCard
@@ -33,7 +33,6 @@ function HouseCollection () {
             sq_ft = {house.sq_ft}
             user_id = {house.user_id}
             image = {house.image}
-            handleAdd={handleAdd}
             handleDelete={handleDelete}
         />
     ))
@@ -41,9 +40,9 @@ function HouseCollection () {
 
     return(
         <>
-            <ul>
-                <li>{HouseCards}</li>
-            </ul>
+            <div className="cardContainer">
+                {HouseCards}
+             </div>
         </>    
     )
 }

@@ -7,6 +7,7 @@
   import Home from "./Components/Home";
   import Aboutus from './Components/AboutUs';
   import HouseCollection from './Components/HouseCollection';
+import AddHouse from './Components/AddHouse';
 
 
  
@@ -14,13 +15,15 @@
   function App() {
 
     
-    // const [productions, setProductions] = useState([])
+    const [houses, setHouses] = useState([])
     const [currentUser, setCurrentUser] = useState(false)
     const [user, setUser] = useState(0)
     // const [houses, setHouses] = useState([])
 
     const updateUser = (user) => setCurrentUser(user)
 
+
+    const addHouse = (house) => setHouses(current => [...current,house])
     // useEffect(() => {
     //   fetch("/authorized_user")
     //   .then((res) => {
@@ -45,6 +48,7 @@
             <Route path='/login' element={<Login updateUser={updateUser}/>} />
             <Route path='/users/new' element={<SignUp updateUser={updateUser}/>} />
             <Route path='/PlanHouse' element={<HouseCollection />} />
+            <Route path='/AddHouse' element={<AddHouse addHouse={addHouse} />} />
           </Routes>
          </main>
       </>
