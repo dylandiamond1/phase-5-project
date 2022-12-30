@@ -38,12 +38,13 @@ footer {
     margin: 0 auto;
   }
 
-  .card {
+  /* .card {
     width: 300px;
-  }
+  } */
 
   .cardContainer {
     width: 100vw;
+    height: 100vh;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -56,6 +57,10 @@ footer {
 
   .text {
     float: left;
+  }
+
+  .navBar {
+    background: "#2c2c2e"
   }
 
  
