@@ -2,6 +2,7 @@ import {useEffect, useState} from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 
 function HouseDetail ({deleteProdcution}) {
+
     const [house, setHouse] = useState({})
     
 

@@ -38,6 +38,13 @@ footer {
     margin: 0 auto;
   }
 
+  .titleText {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    color: red;
+    }
+
   /* .card {
     width: 300px;
   } */
@@ -63,10 +70,5 @@ footer {
     background: "#2c2c2e"
   }
 
- 
-
-
-
-
-
-
+  
+  

@@ -5,11 +5,11 @@ import { useNavigate, Link } from 'react-router-dom';
 
 function HouseCard ({handleDelete, state, zip, address, sq_ft, city, user_id, image, id}) {
 
-    const navigate = useNavigate()
+    // const navigate = useNavigate()
 
-    const handleNav = () => {
-        navigate('/addhouse')
-    }
+    // const handleNav = () => {
+    //     navigate('/addhouse')
+    // }
 // const {address, state, zip, city, sq_ft, user_id, id, image} = house
 
     // function handleDeleteHouse(){
@@ -31,7 +31,7 @@ function HouseCard ({handleDelete, state, zip, address, sq_ft, city, user_id, im
          <p>{sq_ft} thousand</p>
          <div className="card-actions justify-end">
       {/* <button className="btn btn-primary" onClick={handleDeleteHouse}>delete</button> */}
-      <button className="btn btn-primary" onClick={handleNav}>new house</button>
+      {/* <button className="btn btn-primary" onClick={handleNav}>new house</button> */}
     </div>
   </div>
 </div>

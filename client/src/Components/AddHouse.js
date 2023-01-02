@@ -36,7 +36,11 @@ function AddHouse({addHouse}) {
       
 
 return (
+
     <div>
+      <div className="titleText">
+      Create a house of your own!
+      </div>
         <form onSubmit={onSubmit}>
         <ul>
         <input className="signupButton input w-full max-w-xs" placeholder="address" type='text' name='address' value={formData.address} onChange={handleChange} />
@@ -60,7 +64,7 @@ return (
         <br></br>
         </ul>
 
-        <input type='submit' value='Update Production' />
+        <input className="btn glass signupButton" type='submit' value='Create House' />
       </form>
     </div>
 

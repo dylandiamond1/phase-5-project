@@ -37,13 +37,13 @@ a1 = Architect.create(company_name:'bowersdesignbuild', first_name:'Bruce', last
 
 puts "creating users..."
 
-u1 = User.create(username: 'paolo', password: 'password', email: 'paolo@gmail.com')
-u2 = User.create(username: 'dylan', password: 'password', email: 'dylan@gmail.com')
-u3 = User.create(username: 'samuel', password: 'password', email: 'sam@gmail.com')
-u4 = User.create(username: 'stephen', password: 'password', email: 'stephen@gmail.com')
-u5 = User.create(username: 'kodakbrindle', password: 'password', email: 'kodakbrindle@gmail.com')
-u6 = User.create(username: 'junosmith', password: 'password', email: 'junosmith@gmail.com')
-u7 = User.create(username: 'yesenia', password: 'password', email: 'yesenia@gmail.com')
+u1 = User.create(username: 'paolo', password: 'password', email: 'paolo@gmail.com', image:'https://www.inprocorp.com/globalassets/color--finish-images/standard-solid/island-blue.jpg?width=500&height=500&mode=crop')
+u2 = User.create(username: 'dylan', password: 'password', email: 'dylan@gmail.com', image: 'https://www.inprocorp.com/globalassets/color--finish-images/standard-solid/buoyantblue.jpg?width=500&height=500&mode=crop')
+u3 = User.create(username: 'samuel', password: 'password', email: 'sam@gmail.com', image: 'https://i.pinimg.com/236x/23/ec/9f/23ec9f4f80edc218e8fc30d17a96cb59--solid-colors.jpg')
+u4 = User.create(username: 'stephen', password: 'password', email: 'stephen@gmail.com', image: 'https://garden.spoonflower.com/c/13106794/p/f/m/StvCYNmO0hkyELWOfpKhilx37H8Y6qCvxUfiHYZaBU01ITWVZrbv/pink%20rose%20coral%20salmon%20blush%20fuchsia%20pastel%20pastels%20solid%20color.jpg')
+u5 = User.create(username: 'kodakbrindle', password: 'password', email: 'kodakbrindle@gmail.com', image: 'https://i.pinimg.com/236x/36/fa/e0/36fae04d112cc0f871d82ce2ff11dd5a.jpg')
+u6 = User.create(username: 'junosmith', password: 'password', email: 'junosmith@gmail.com', image: 'https://www.inprocorp.com/globalassets/color--finish-images/standard-solid/porcelain-blue.jpg?width=500&height=500&mode=crop')
+u7 = User.create(username: 'yesenia', password: 'password', email: 'yesenia@gmail.com', image: 'https://bodaq.com/wp-content/uploads/2019/08/bodaq-s143-solid-color-interior-film-solid-color-collection-300x300.jpg')
 
 puts "created users"
 

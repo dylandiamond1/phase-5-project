@@ -1,5 +1,5 @@
   import React from 'react'
-  import  {useState} from "react";
+  import  {useState, useEffect} from "react";
   import { Route, Routes} from "react-router-dom";
   import Login from "./Components/Login";
   import SignUp from "./Components/Signup";
@@ -28,18 +28,19 @@
 
 
     const addHouse = (house) => setHouses(current => [...current,house])
-    // useEffect(() => {
-    //   fetch("/authorized_user")
-    //   .then((res) => {
-    //     if (res.ok) {
-    //       res.json()
-    //       .then((user) => {
-    //         updateUser(user);
-    //         fetchHouses()
-    //       });
-    //     }
-    //   })
-    // },[])
+    useEffect(() => {
+      fetch("/authorized_user")
+      .then((res) => {
+        if (res.ok) {
+          res.json()
+          .then((user) => {
+            updateUser(user);
+          });
+        }
+      })
+    },[])
+
+    
 
    
     return (
@@ -52,7 +53,7 @@
             <Route path='/OurProcess' element={<OurProccess/>} />
             <Route path='/login' element={<Login updateUser={updateUser}/>} />
             <Route path='/users/new' element={<SignUp updateUser={updateUser}/>} />
-            <Route path='/PlanHouse' element={<HouseCollection />} />
+            <Route path='/PastProjects' element={<HouseCollection />} />
             <Route path='/AddHouse' element={<AddHouse addHouse={addHouse} />} />
             <Route path='/houses/:id' element={<HouseDetail deleteProduction={deleteProduction} />} />
           </Routes>
