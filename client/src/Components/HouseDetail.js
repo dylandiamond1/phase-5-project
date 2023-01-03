@@ -43,7 +43,7 @@ function HouseDetail ({deleteProdcution}) {
              <h2 className="card-title"></h2>
              <p>{address}</p>
              <p>{city}</p>
-             <p>{sq_ft} thousand</p>
+             <p>{sq_ft} thousand sq ft</p>
              <div className="card-actions justify-end">
           <button className="btn btn-primary" onClick={handleDelete}>delete</button>
           {/* <button className="btn btn-primary" onClick={handleNav}>new house</button> */}

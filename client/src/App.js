@@ -10,7 +10,8 @@
   import AddHouse from './Components/AddHouse';
   import HouseDetail from './Components/HouseDetail';
   import OurProccess from './Components/OurProcess';
-
+  import Footer from './Components/Footer'
+  import Idk from './Components/idk'
 
  
 
@@ -55,9 +56,11 @@
             <Route path='/users/new' element={<SignUp updateUser={updateUser}/>} />
             <Route path='/PastProjects' element={<HouseCollection />} />
             <Route path='/AddHouse' element={<AddHouse addHouse={addHouse} />} />
+            <Route path='/blah' element={<Idk />} />
             <Route path='/houses/:id' element={<HouseDetail deleteProduction={deleteProduction} />} />
           </Routes>
          </main>
+         <Footer/>
       </>
     )
         }

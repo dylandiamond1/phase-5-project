@@ -5,6 +5,7 @@ import { useState, useEffect } from 'react';
 
 function Navigation({updateUser}) {
 
+  
   const [user, setUser] = useState({})
   const params = useParams()
 
@@ -48,7 +49,6 @@ const handleLogOut = () => {
 
     return (
       <nav style={{background: "opacity:0.6"}}> 
-      <div id="navbar">
         <div className="navbar bg-base-100" style={{height: "8vh"}}>
           <div className="navbar-start">
             <div className="dropdown">
@@ -79,7 +79,6 @@ const handleLogOut = () => {
         <li><Link to='/users/new'>Sign Up</Link></li>
       </ul>
           </div>
-        </div>
         </div>
         </div>
       </nav>

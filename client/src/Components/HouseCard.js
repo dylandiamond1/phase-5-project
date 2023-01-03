@@ -26,9 +26,9 @@ function HouseCard ({handleDelete, state, zip, address, sq_ft, city, user_id, im
     <Link  to={`/houses/${id}`}> <figure><img style={{width: "25vw", height: "25vh", borderTopLeftRadius: "30px", borderTopRightRadius: "30px"}}src={image} alt="Shoes" /></figure></Link>
          <div className="card-body">
          <h2 className="card-title"></h2>
-         <p>{address}</p>
+         <p>{address} {state} {zip}</p>
          <p>{city}</p>
-         <p>{sq_ft} thousand</p>
+         <p>{sq_ft} thousand sq ft</p>
          <div className="card-actions justify-end">
       {/* <button className="btn btn-primary" onClick={handleDeleteHouse}>delete</button> */}
       {/* <button className="btn btn-primary" onClick={handleNav}>new house</button> */}
