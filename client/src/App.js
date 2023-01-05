@@ -12,6 +12,8 @@
   import OurProccess from './Components/OurProcess';
   import Footer from './Components/Footer'
   import Idk from './Components/idk'
+  import ContactPage from './Components/ContactPage';
+
 
  
 
@@ -46,7 +48,7 @@
    
     return (
       <>
-      <Navigation updateUser={updateUser} user={user} setUser={setUser} />
+      <Navigation updateUser={updateUser} currentUser={currentUser}  />
       <main>
           <Routes>
             <Route path='/' element={<Home />} />
@@ -54,11 +56,13 @@
             <Route path='/OurProcess' element={<OurProccess/>} />
             <Route path='/login' element={<Login updateUser={updateUser}/>} />
             <Route path='/users/new' element={<SignUp updateUser={updateUser}/>} />
-            <Route path='/PastProjects' element={<HouseCollection />} />
+            <Route path='/PastProjects' element={<HouseCollection />} /> 
             <Route path='/AddHouse' element={<AddHouse addHouse={addHouse} />} />
             <Route path='/blah' element={<Idk />} />
-            <Route path='/houses/:id' element={<HouseDetail deleteProduction={deleteProduction} />} />
-          </Routes>
+            <Route path='/ContactUs' element={<ContactPage />} />
+            <Route path='/houses/:id' element={<HouseDetail currentUser = {currentUser} deleteProduction={deleteProduction} />} /> 
+  
+          </Routes> 
          </main>
          <Footer/>
       </>

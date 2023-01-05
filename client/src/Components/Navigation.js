@@ -3,19 +3,19 @@ import img1 from './diamond.png'
 import { useState, useEffect } from 'react';
 
 
-function Navigation({updateUser}) {
+function Navigation({updateUser, currentUser}) {
 
   
-  const [user, setUser] = useState({})
-  const params = useParams()
+  // const [user, setUser] = useState({})
+  // const params = useParams()
 
-  useEffect(() => {
-    fetch (`/users/${params.id}`)
-    .then(res => res.json())
-    .then(data => { 
-      console.log(data)
-        setUser(data) }
-)}, []);
+//   useEffect(() => {
+//     fetch (`/users/${params.id}`)
+//     .then(res => res.json())
+//     .then(data => { 
+//       console.log(data)
+//         setUser(data) }
+// )}, []);
 
 
 
@@ -46,7 +46,7 @@ const handleLogOut = () => {
 
 
   // const {image} = user
-
+  console.log(currentUser)
     return (
       <nav style={{background: "opacity:0.6"}}> 
         <div className="navbar bg-base-100" style={{height: "8vh"}}>
@@ -58,8 +58,8 @@ const handleLogOut = () => {
                     <ul tabIndex={0} className="menu menu-compact dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52" style={{background: "white"}}>
                           <li><Link to='AboutUs'>About Us</Link></li>
                           <li><Link to='OurProcess'>Our Process</Link></li>
-                          <li><Link to='/PastProjects'>Our Houses</Link></li>
-                          <li><Link to='/AddHouse'>Plan My Own House</Link></li>
+                          { currentUser && <li><Link to='/PastProjects'>Our Houses</Link></li> }
+                          { currentUser && <li><Link to='/AddHouse'>Plan My Own House</Link></li> }
                           </ul>
                         </div>
                       </div>

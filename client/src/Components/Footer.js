@@ -12,17 +12,7 @@ function Footer() {
         </p>
         <p className='footer-subscription-text'>
         </p>
-        <div className='input-areas'>
-          <form>
-            <input
-              className='footer-input'
-              name='email'
-              type='email'
-              placeholder='Your Email'
-            />
-            <Button buttonStyle='btn--outline'>Subscribe</Button>
-          </form>
-        </div>
+        <a buttonStyle='btn--outline' href="email@diamonddevs.com">Reach Out!</a>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
@@ -42,14 +32,6 @@ function Footer() {
             <Link to='/'>Sponsorships</Link>
           </div>
         </div>
-        <div className='footer-link-wrapper'>
-          <div class='footer-link-items'>
-            <h2>Videos</h2>
-            <Link to='/'>Submit Video</Link>
-            <Link to='/'>Ambassadors</Link>
-            <Link to='/'>Agency</Link>
-            <Link to='/'>Influencer</Link>
-          </div>
           <div class='footer-link-items'>
             <h2>Social Media</h2>
             <Link to='/blah'>Instagram</Link>
@@ -57,7 +39,6 @@ function Footer() {
             <Link to='/blah'>Youtube</Link>
             <Link to='/blah'>Twitter</Link>
           </div>
-        </div>
       </div>
       <section class='social-media'>
         <div class='social-media-wrap'>

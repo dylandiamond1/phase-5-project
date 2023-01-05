@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+import { useNavigate } from 'react-router-dom'
 
 
 
@@ -12,6 +13,9 @@ function Login({updateUser}) {
     
 
     const {username, password} = formData
+    const navigate = useNavigate()
+
+   
 
     function onSubmit(e){
         e.preventDefault()
@@ -42,6 +46,8 @@ function Login({updateUser}) {
         const { name, value } = e.target
         setFormData({ ...formData, [name]: value })
       }
+
+      
     return (
         <> 
         <form  className="form" onSubmit={onSubmit}>
@@ -60,7 +66,7 @@ function Login({updateUser}) {
         </ul>
        
        
-        <input className="btn glass signupButton" type='submit' value='Log in!' />
+        <input className="btn glass signupButton" type='submit' value='Log in!'/>
       </form>
       {errors? <div>{errors}</div>:null}
         </>

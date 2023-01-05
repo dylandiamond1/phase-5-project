@@ -1,7 +1,7 @@
 import {useEffect, useState} from "react";
 import { useNavigate, useParams } from 'react-router-dom';
 
-function HouseDetail ({deleteProdcution}) {
+function HouseDetail ({deleteProduction, currentUser}) {
 
     const [house, setHouse] = useState({})
     
@@ -26,12 +26,13 @@ function HouseDetail ({deleteProdcution}) {
           headers: {'Content-Type': 'application/json'}
         })
         .then (res => res.json())
-        .then (id => deleteProdcution(id))
+        .then (id => deleteProduction(id))
         navigate('/')
     }
 
-        const {id, address, image, city, sq_ft} = house
-
+        const {id, address, image, city, sq_ft, user_id} = house
+     console.log(currentUser.id, user_id)
+     console.log(house)
     return (
         <div style={{height: "92vh", width: "100vw", display: "flex", justifyContent: "center", alignItems: "center"}}>
         <div className="cardBox2">
@@ -45,7 +46,7 @@ function HouseDetail ({deleteProdcution}) {
              <p>{city}</p>
              <p>{sq_ft} thousand sq ft</p>
              <div className="card-actions justify-end">
-          <button className="btn btn-primary" onClick={handleDelete}>delete</button>
+          { currentUser.id === user_id && <button className="btn btn-primary" onClick={handleDelete}>delete</button>}
           {/* <button className="btn btn-primary" onClick={handleNav}>new house</button> */}
         </div>
       </div>
