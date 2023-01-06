@@ -13,6 +13,8 @@
   import Footer from './Components/Footer'
   import Idk from './Components/idk'
   import ContactPage from './Components/ContactPage';
+  import ContactForm from './Components/ContactForm';
+
 
 
  
@@ -43,15 +45,12 @@
       })
     },[])
 
-    
-
    
     return (
       <>
       <Navigation updateUser={updateUser} currentUser={currentUser}  />
       <main>
           <Routes>
-            <Route path='/' element={<Home />} />
             <Route path='/AboutUs' element={<Aboutus />} />
             <Route path='/OurProcess' element={<OurProccess/>} />
             <Route path='/login' element={<Login updateUser={updateUser}/>} />
@@ -60,8 +59,9 @@
             <Route path='/AddHouse' element={<AddHouse addHouse={addHouse} />} />
             <Route path='/blah' element={<Idk />} />
             <Route path='/ContactUs' element={<ContactPage />} />
+            <Route path='/ContactForm' element={<ContactForm />} />
             <Route path='/houses/:id' element={<HouseDetail currentUser = {currentUser} deleteProduction={deleteProduction} />} /> 
-  
+            <Route exact path='/' element={<Home />} />
           </Routes> 
          </main>
          <Footer/>

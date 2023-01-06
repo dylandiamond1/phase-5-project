@@ -33,7 +33,7 @@ function Login({updateUser}) {
             if(res.ok){
                 res.json().then(user => {
                     updateUser(user)
-                    
+                    navigate('/')
                 })
             }else {
                 res.json().then(json => setErrors(json.errors))

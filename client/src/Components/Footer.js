@@ -12,7 +12,7 @@ function Footer() {
         </p>
         <p className='footer-subscription-text'>
         </p>
-        <a buttonStyle='btn--outline' href="email@diamonddevs.com">Reach Out!</a>
+        <a buttonStyle='btn--outline' href="mailto:email@diamonddevs.com">Reach Out!</a>
       </section>
       <div class='footer-links'>
         <div className='footer-link-wrapper'>
